@@ -14,7 +14,14 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI.Application/AuthorizationAPI.Application.csproj": {
+            "projectPath": "/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI.Application/AuthorizationAPI.Application.csproj"
+          },
+          "/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI.Infrastructure/AuthorizationAPI.Infrastructure.csproj": {
+            "projectPath": "/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI.Infrastructure/AuthorizationAPI.Infrastructure.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -26,14 +33,6 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
-        "MediatR": {
-          "target": "Package",
-          "version": "[8.1.0, )"
-        },
-        "MediatR.Extensions.Microsoft.DependencyInjection": {
-          "target": "Package",
-          "version": "[8.1.0, )"
-        },
         "Microsoft.EntityFrameworkCore": {
           "target": "Package",
           "version": "[3.1.7, )"

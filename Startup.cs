@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using AuthorizationAPI.Application;
 using AuthorizationAPI.Domain;
+using AuthorizationAPI.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,20 +27,38 @@ namespace AuthorizationAPI
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddDbContext<AuthDbContext>(opt =>
+            //TODO get cors domains in an array from app.settings
+            services.AddCors(options =>
             {
-                opt.UseNpgsql(Configuration.GetConnectionString("AuthDB"));
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins(
+                            "http://localhost:4200")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
             });
+            
+            services.AddControllers();
+            // services.AddDbContext<AuthDbContext>(opt =>
+            // {
+            //     opt.UseNpgsql(Configuration.GetConnectionString("AuthDB"));
+            // });
 
-            services.AddTransient<IUserService, UserService>();
-            // services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
-            services.AddMediatR(typeof(Startup));
+            // services.AddTransient<IUserService, UserService>();
+            
+            // services.AddMediatR(typeof(Startup));
 
+            services.AddInfrastructureLayer(Configuration);
+            
+            services.AddApplicationLayer();
+            
             services.AddSwaggerGen();
         }
 
@@ -52,12 +71,15 @@ namespace AuthorizationAPI
             }
 
             app.UseSwagger();
-
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
 
             app.UseHttpsRedirection();
 
+            // app.UseCors();
+
             app.UseRouting();
+            
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

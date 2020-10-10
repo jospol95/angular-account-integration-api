@@ -51,3 +51,16 @@
 /Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Swashbuckle.Core.dll
 /Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/WebActivatorEx.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/AuthorizationAPI.Application.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/AuthorizationAPI.Domain.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/AuthorizationAPI.Infrastructure.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/AuthorizationAPI.Application.pdb
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/AuthorizationAPI.Infrastructure.pdb
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/AuthorizationAPI.Domain.pdb
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Autofac.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/MediatR.Extensions.Autofac.DependencyInjection.dll
+/Users/josep/Desktop/Projects/Angular-net-core account integration/NETCoreWebApi/AuthorizationAPI/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll
