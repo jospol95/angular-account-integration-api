@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AuthorizationAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("authApi/[controller]")]
     
     public class AuthController : BaseController
     {
@@ -53,12 +53,16 @@ namespace AuthorizationAPI.Controllers
             {
                 var existingUserId = await _mediator.Send(loginUserCommand);
                 var token = await GetTokenForUser(existingUserId);
-                
+
                 return Ok(new {token});
+            }
+            catch (EmailNotRegisteredException emailNotRegisteredException)
+            {
+                return Unauthorized(emailNotRegisteredException.Message);
             }
             catch (EmailAndOrPasswordIncorrectException emailAndOrPasswordIncorrectException)
             {
-                return StatusCode(403);
+                return Unauthorized(emailAndOrPasswordIncorrectException.Message);
             }
             catch (Exception ex)
             {
